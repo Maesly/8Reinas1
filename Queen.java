@@ -14,6 +14,7 @@ public class Queen {
     private ArrayList soluciones = new ArrayList();
     private boolean sols;
 
+    
     public Queen(int tamanio){
         if (tamanio < 4) throw new NullPointerException();
         this.n = tamanio;
@@ -48,6 +49,7 @@ public class Queen {
                 vertical[col] = false;
                 diagonalInferior[col-fila+n-1] = false;
                 diagonalSuperior[col+fila] = false;
+
 
                 if (fila == n-1 && solucionNueva(this.solucion)){
                     haySolucion = true;
